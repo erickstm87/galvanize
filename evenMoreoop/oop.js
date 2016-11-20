@@ -35,9 +35,18 @@ class Weapon {
     this.name = name;
     this.strength = strength;
   }
+  applyAttack(attackPoints){
+    var attacks = attackPoints * this.strength;
+    //attackPoints *= this.strength;
+    return attacks;
+  }
 }
 
 var billybob = new Monepok('billybob','fire',{maxHp: 90, attack: 40});
-console.log(billybob['isFainted']());
+console.log(billybob['isFainted']());const weapon1 = new Weapon('Sword', 1.25);
 var shield1 = new Shield(.75);
 console.log(shield1.applyDefense(100));
+var excalibur = new Weapon('excalibur',1.3);
+console.log(excalibur['strength']);
+console.log(excalibur['name']);
+console.log(excalibur.applyAttack(80));
