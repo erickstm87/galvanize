@@ -41,12 +41,25 @@ class Weapon {
     return attacks;
   }
 }
+class Duel {
+  constructor(player1,player2){
+    this.player1 = player1;
+    this.player2 = player2;
+  }
+  battle(monepok1,monepok2){
+    return(monepok2.battleStats.attack);
+  }
+}
+
 
 var billybob = new Monepok('billybob','fire',{maxHp: 90, attack: 40});
-console.log(billybob['isFainted']());const weapon1 = new Weapon('Sword', 1.25);
+var cletus = new Monepok('cletus','earth',{maxHp: 100, attack: 60});
+console.log(billybob['isFainted']());
 var shield1 = new Shield(.75);
 console.log(shield1.applyDefense(100));
 var excalibur = new Weapon('excalibur',1.3);
 console.log(excalibur['strength']);
 console.log(excalibur['name']);
 console.log(excalibur.applyAttack(80));
+var match = new Duel(billybob,cletus);
+console.log(match.battle());
