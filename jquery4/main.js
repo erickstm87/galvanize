@@ -61,8 +61,42 @@ $('a').click(function(event){
 });
 
 //#9
-$('.dropdown').find('.dropdown:nth-child(2)').click(function(){
-  console.log('hello');
-  $(this).insertAfter('.dropdown');
-});
+$('.dropdown').click(function(){
+  var x = $(':selected').text();
+  if(x === 'Wahoo!!!'){
+    $(`<h3>${x}</h3>`).insertAfter('.dropdown');
+  }
+  console.log(x);
 })
+var y = true;
+$('#alert10').on('click', function(){
+  var x = 0;
+  $('#alertList li').each(function(){
+    x ++;
+  })
+  alert('there are ' + x + ' elements in this list!!');
+  console.log(y);
+  if(y === true){
+    $('#alertList').append('<button class="newButton"> Remove Dealer\'s choice!</button>');
+    $('.newButton').on('click', function(){
+      //$('#alertList li:nth-child(3)').remove();
+      $('#alertList li').last().remove();
+      y = false;
+      console.log(y);
+    });
+    $('#alertList').append('<button class="oldButton">Add an entry</button>');
+    $('.oldButton').on('click', function(){
+      console.log('this ran?!!!');
+      $('#alertList').append('<li>quatro</li>');
+      y = false;
+    })
+  }
+
+})
+//#12
+$('#display12').on('click',function(){
+  alert('I don\'t understand the question ...');
+})
+
+
+});
