@@ -1,0 +1,17 @@
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#title {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  padding: 3px;
+  border: 1px solid #999;
+  font-family: sans-serif;
+}
