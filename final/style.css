@@ -1,3 +1,13 @@
 body {
   background-color: #9fadbd;
 }
+li {
+  color: White;
+  padding-left: 60px;
+  font-size: 30px
+}
+strong{
+  
+  border-style: dotted;
+  border-color: yellow;
+}
